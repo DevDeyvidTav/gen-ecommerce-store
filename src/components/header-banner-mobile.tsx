@@ -1,5 +1,6 @@
 "use client";
 
+import { CompanyDetails } from "@/info/company-details";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -21,8 +22,8 @@ export function HeaderBannerMobile() {
     return (
         <div  className="bg-cover bg-[#c43e42] lg:hidden flex justify-center items-center   w-full h-32">
             <div className={`w-24 z-50 h-24 bg-primary relative flex justify-center items-center -bottom-16 border-2 duration-500 border-white rounded-full ${isVisible}`}>
-                <Image className="w-16 h-16"
-                    src={"/logo.jpeg"}
+                <Image className="w-16 rounded-full h-16"
+                    src={CompanyDetails.logo}
                     alt="Logo"
                     width={100}
                     height={100}

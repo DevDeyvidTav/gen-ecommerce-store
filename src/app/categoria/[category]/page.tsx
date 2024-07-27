@@ -142,7 +142,7 @@ export default function Page() {
                         ))}
                     </ul>
                 </div>
-            <div className="w-full 2xl:max-w-[1300px] mx-auto">
+            <div className="w-full 2xl:max-w-[1400px] mx-auto">
                 
                 <div className="w-4/5 mx-auto flex justify-center md:hidden items-center pt-52 lg:pt-40">
                     <h2 className="text-primary text-2xl font-semibold">{category === "promocoes" ? "Promocões" : categoryDetail?.name}</h2>

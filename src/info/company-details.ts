@@ -1,8 +1,8 @@
 export const CompanyDetails = {
-    name: "Gen Ecommerce",
+    name: "Lojão Tudo 18",
     instagram: "https://www.instagram.com/",
     facebook: "https://www.facebook.com/",
-    logo: "",
+    logo: "/logo-lojao-tudo-18.jpg",
     whatsapp: "https://wa.me/5491153000000",
-    comerce_descriptrion: "O modelo ideal de loja virtual para seu negócio e sua marca.",
+    comerce_descriptrion: "",
 }

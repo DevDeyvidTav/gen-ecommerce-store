@@ -50,7 +50,7 @@ export default function Page({
         loading ? <LoadingModal loading={loading} /> : (
             <div className="w-full  min-h-screen">
                 <Header categories={categories} animation={false} />
-                <div className="w-full 2xl:max-w-[1300px] mx-auto">
+                <div className="w-full 2xl:max-w-[1400px] mx-auto">
                     <div className="pt-16 lg:pt-32 px-4 lg:px-16">
                         <div className=" hidden mx-auto pt-8 lg:flex justify-start border-b-[0.5px] border-zinc-200 pb-2 mb-5 gap-5 items-center">
                             <Breadcrumb className="">

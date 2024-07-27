@@ -1,5 +1,3 @@
-"use client"
-
 import {
     Carousel,
     CarouselContent,
@@ -8,6 +6,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
+import Image from "next/image"
 import React from "react"
 
 interface BannerCarousselProps {
@@ -24,20 +23,18 @@ export function BannerCaroussel({ banners }: BannerCarousselProps) {
             plugins={[plugin.current]}
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
-            className={`${banners.length === 0 ? "hidden" : ""} w-[92%] lg:mt-24 md:max-w-[1300px] mx-auto -z-0   max-w-full`}>
-            <CarouselContent className="w-full ">
+            className={`${banners.length === 0 ? "hidden" : ""} w-full mx-auto -z-0 max-w-full`}>
+            <CarouselContent className="w-full">
                 {
                     banners.map((banner) => {
-                     
                         return (
-                            <CarouselItem key={banner.id} style={{ backgroundImage: `url('${banner.imageUrl}')` }} className="w-full bg-center bg-cover md:h-96 h-48"></CarouselItem>
+                            <CarouselItem key={banner.id} className="w-full bg-center md:h-[600px] h-48 bg-cover relative">
+                                <Image src={banner.imageUrl} alt="Banner" quality={100} placeholder="empty" layout="fill" objectFit="cover" />
+                            </CarouselItem>
                         )
                     })
                 }
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
         </Carousel>
-
     )
 }

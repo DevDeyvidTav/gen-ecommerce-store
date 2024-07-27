@@ -161,14 +161,14 @@ export default function Page({
   return (
     loading ? <div><LoadingModal loading={loading} /></div> : <div className="w-full min-h-screen lg:bg-gray-200 pb-8">
       <div className="w-full  bg-primary z-50 text-white fixed">
-        <div className="w-full xl:max-w-[1300px] mx-auto justify-between  h-16 md:h-28 px-4 flex items-center">
+        <div className="w-full xl:max-w-[1400px] mx-auto justify-between  h-16 md:h-28 px-4 flex items-center">
           <button onClick={() => router.back()} className="md:hidden">
             <IoArrowBack className="text-2xl" />
           </button>
           <div className="w-16 h-16 rounded-full md:hidden flex justify-center items-center bg-primary">
-            <Link href={"/"}><Image className="w-10 h-10" src={"/logo.jpeg"} alt="Logo" width={100} height={100} /></Link>
+            <Link href={"/"}><Image className="w-10 h-10 rounded-full" src={CompanyDetails.logo} alt="Logo" width={100} height={100} /></Link>
           </div>
-          <Link className="hidden md:block" href={"/"}><Image className="hidden md:block" src={"/logo.jpeg"} alt="Logo" width={70} height={70} /></Link>
+          <Link className="hidden md:block" href={"/"}><Image className="hidden rounded-full md:block" src={CompanyDetails.logo} alt="Logo" width={70} height={70} /></Link>
           <div className="w-[30%] mr-32 hidden justify-between lg:flex">
             <NavigationMenu className="w-full">
               <NavigationMenuList className="flex items-center">
@@ -238,7 +238,7 @@ export default function Page({
       </div>
       {/* Desktop */}
       <div className="hidden  pt-32 md:block">
-        <div className="w-3/4 xl:max-w-[1300px] mx-auto flex justify-start border-b-[0.5px] border-zinc-200 pb-2 mb-5 gap-5 items-center">
+        <div className="w-3/4 xl:max-w-[1400px] mx-auto flex justify-start border-b-[0.5px] border-zinc-200 pb-2 mb-5 gap-5 items-center">
           <Breadcrumb className="">
             <BreadcrumbList>
               <BreadcrumbItem className="bg-primary text-white hover:text-white hover:opacity-80 duration-500 p-2 rounded-lg">
@@ -252,7 +252,7 @@ export default function Page({
             {productDetails.name}
           </h2>
         </div>
-        <div className="md:flex w-[80vw] xl:max-w-[1300px] mx-auto h-[75vh] px-10 hidden bg-white py-6 rounded-t-3xl shadow-md justify-between  ">
+        <div className="md:flex w-[80vw] xl:max-w-[1400px] mx-auto h-[75vh] px-10 hidden bg-white py-6 rounded-t-3xl shadow-md justify-between  ">
           <div style={{ backgroundImage: `url(${productDetails.imageUrl})` }} className="w-[35%] h-full shadow-lg rounded-lg flex justify-center items-end bg-cover bg-center bg-no-repeat">
             <div className=" justify-between w-14 flex mb-5 items-center">
 
