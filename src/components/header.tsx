@@ -52,7 +52,7 @@ import { BiUser } from "react-icons/bi";
     const router = useRouter();
   
     return (
-      <header className="bg-primary fixed z-50 w-full">
+      <header className="bg-primary px-6 lg:px-0 fixed z-50 w-full">
         <div
           className={`flex justify-between items-center max-w-[1400px] mx-auto pt-2 text-white ${
             isVisible ? "h-20" : "h-16"
