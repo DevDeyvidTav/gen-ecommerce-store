@@ -52,9 +52,7 @@ export default function Home() {
   ) : (
     <main className="w-screen md:overflow-hidden">
       <Header animation categories={categories} />
-      <div className="pt-16 max-w-full w-full">
-        <HeaderBannerMobile />
-        <SocialMediaHeader />
+      <div className="pt-20 max-w-full w-full">
         <SearchBar categories={categories} />
         <div className="w-[92%] hidden lg:flex lg:mt-24 md:max-w-[1400px] mx-auto justify-between -z-0 max-w-full">
           <div className="w-[20%] border-[0.5px]">

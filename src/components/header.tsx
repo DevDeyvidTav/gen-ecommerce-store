@@ -2,6 +2,7 @@ import {
   IoBag,
   IoLogoFacebook,
   IoLogoInstagram,
+  IoLogoTwitter,
   IoLogoWhatsapp,
   IoMenu,
   IoPerson,
@@ -23,6 +24,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { CartContext } from "@/contexts";
 import { BiUser } from "react-icons/bi";
+import { ArrowRight, User } from "lucide-react";
 
 interface IHeader {
   animation: boolean;
@@ -77,6 +79,45 @@ export function Header({ animation, categories }: IHeader) {
             </SheetTrigger>
             <SheetContent side="left">
               <SheetClose />
+              <div className="flex gap-4 items-center font-bold text-xl">
+                <Image
+                  src={CompanyDetails.logo}
+                  alt="Logo"
+                  className="rounded-full"
+                  width={70}
+                  height={70}
+                />
+                <h2>
+                  <Link href="/">{CompanyDetails.name}</Link>
+                </h2>
+              </div>
+              <Link className="flex items-center mt-6 gap-2 font-medium" href="/"><User />Login</Link>
+              <h3 className="text-xl font-medium mt-6">
+                Categorias
+              </h3>
+              <ul className="flex flex-col gap-4 mt-4 min-h-[300px]">
+                {categories?.map((category) => (
+                  <li key={category.id}>
+                    <Link
+                      className="w-full flex justify-between items-center"
+                      href={`/categoria/${category.id}`}
+                    >
+                      {category.name} <ArrowRight />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div>
+                <h3 className="text-xl font-medium mt-6">
+                  Redes Sociais
+                </h3>
+                <div className="flex items-center gap-6 mt-4">
+                  <IoLogoInstagram className="w-6 h-6" />
+                  <IoLogoFacebook className="w-6 h-6" />
+                  <IoLogoWhatsapp className="w-6 h-6" />
+                  <IoLogoTwitter className="w-6 h-6" />
+                </div>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
